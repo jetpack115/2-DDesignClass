@@ -27,6 +27,8 @@ Made my Guassian filter a little bit more quick, mainly by removing some print s
     b) use these to edge detect
     c) To find the total of these use trig to find hypotenuse and combine values to one image
     d) Find angle of the edge using trig atan(gradienty/gradientx) to add color and add orentaiton to the image!
+
+
 Goals for next week
  - Implement an algorithm for the Sobel edge detection algorithm.
 
