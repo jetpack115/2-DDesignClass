@@ -6,7 +6,7 @@ import java.io.*;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-public class driverGauss {
+public class meanBlurrDriver {
     public static void main (String[] args)
     {
         long start = System.currentTimeMillis();
@@ -21,11 +21,11 @@ public class driverGauss {
             image = ImageIO.read(input);
             int radius = 9;
 
-            gaussianBlurr helper = new gaussianBlurr();
-            double[][] weights = helper.generateWeightMatric(radius, 3); 
-            BufferedImage out = helper.createGImage(image, weights, radius);
+            meanBlurr blury = new meanBlurr();
+            double[][] weights = blury.generateRandomMatrix(radius); 
+            BufferedImage out = blury.createrandomImage(image, weights, radius);
             
-            File ouptut = new File("GaussianImageComplete.jpg");
+            File ouptut = new File("meanBlurredImaga.jpg");
             ImageIO.write(out, "jpg", ouptut);
         }
         catch (IOException e)

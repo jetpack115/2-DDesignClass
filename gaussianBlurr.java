@@ -18,12 +18,10 @@ public class gaussianBlurr {
             {
                 weights[i][j] = this.gModel(i - radius / 2, j - radius / 2, variance);
                 sum += weights[i][j];
-
-                System.out.println(weights[i][j] + "");
+                
             }
         }
-        System.out.println("------------------");
-
+        
         for (int i = 0; i < weights.length; i++)
         {
             for (int j = 0; j < weights[i].length; j++)
@@ -31,6 +29,7 @@ public class gaussianBlurr {
                 weights[i][j] /= sum;
             }
         }
+        
         return weights;
     }
 
@@ -46,33 +45,47 @@ public class gaussianBlurr {
         {
             for (int y = 0; y < height - radius; y++)
             {
-                double[][] red = new double[radius][radius];
-                double[][] green = new double[radius][radius];
-                double[][] blue = new double[radius][radius];
 
+                double redskies = 0;
+                double greenskies = 0;
+                double blueskies = 0;
+
+                // This for loop goes through our top row first and gets the 2-D arrays of red green and blue
+                // and then prints out the results by row (see method call after for loops in this thread).
                 for (int weightX = 0; weightX < weights.length; weightX++)
                 {
                     for(int weightY = 0; weightY < weights[weightX].length; weightY++)
                     {
                         try {
+                            // Where we iterate through the matrix
                             int sampleX = x + weightX - (weights.length / 2);
                             int sampleY = y + weightY - (weights.length / 2);
 
                             double currentWeight = weights[weightX][weightY];
 
+                            // Samples the color at our calculated values of the matrix
                             Color sampledColor = new Color(source.getRGB(sampleX, sampleY));
-                        
+                            
+                            /*
                             red[weightX][weightY] = currentWeight * sampledColor.getRed();
                             green[weightX][weightY] = currentWeight * sampledColor.getGreen();
                             blue[weightX][weightY] = currentWeight * sampledColor.getBlue();
+                            */
+
+                            redskies += currentWeight * sampledColor.getRed();
+                            greenskies += currentWeight * sampledColor.getGreen();
+                            blueskies += currentWeight * sampledColor.getBlue();
+
                         }
+                        //Catches our out of bounds 
                         catch (Exception e) 
                         {
-                            System.out.println("OUT OF BOUNDS");
+                            // Removing this piece makes it soooooo quick!
                         }
                     }
                 }
-                result.setRGB(x, y, new Color(this.getWeightedColorVal(red), this.getWeightedColorVal(green), this.getWeightedColorVal(blue)).getRGB());
+                //result.setRGB(x, y, new Color(this.getWeightedColorVal(red), this.getWeightedColorVal(green), this.getWeightedColorVal(blue)).getRGB());
+                result.setRGB(x, y, new Color((int)redskies, (int)greenskies, (int)blueskies).getRGB());
 
 
 
