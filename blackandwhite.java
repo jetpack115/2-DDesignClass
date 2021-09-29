@@ -44,10 +44,11 @@ public class blackandwhite {
          File ouptut = new File("blackandwhiteOUT.jpg");
          ImageIO.write(image, "jpg", ouptut);
          
-      } catch (Exception e) {}
+      } 
+      catch (Exception e) 
+      {
+         
+      }
    }
    
-   static public void main(String args[]) throws Exception {
-      blackandwhite obj = new blackandwhite();
-   }
 }

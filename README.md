@@ -27,8 +27,12 @@ Made my Guassian filter a little bit more quick, mainly by removing some print s
     b) use these to edge detect
     c) To find the total of these use trig to find hypotenuse and combine values to one image
     d) Find angle of the edge using trig atan(gradienty/gradientx) to add color and add orentaiton to the image!
-
-
 Goals for next week
  - Implement an algorithm for the Sobel edge detection algorithm.
+
+Week of 9/29/21
+Implemented the Sobel Edge Detector algorithm. I managed to get everything, but one thing in my Sobel algorithm, which was the angle to get a hind of color to give me more information to work with. Regarldess, the Sobel algorithm works and there are defined edges for my pictures that are put into it! I also took a look at the canny edge detector which I will work on to get an even better Edge detector.
+Goals for next week
+  - Implement the agnle piece in my sobel algorithm to get color into my images and give them depth
+  - Look at the Canny Edge Detector and determine what needs to be done to impliment if not implement it.
 
