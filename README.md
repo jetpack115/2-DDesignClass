@@ -36,3 +36,14 @@ Goals for next week
   - Implement the agnle piece in my sobel algorithm to get color into my images and give them depth
   - Look at the Canny Edge Detector and determine what needs to be done to impliment if not implement it.
 
+Week of 10/06/21
+Looked at the histogram class, and created a way to count the amount of pixels within an already processed sobel
+picture. The class whitetoRed.java converts all rgb values greater thatn 15 (so the outlines from the sobel) into red and then calculates the amount of times it detects that condition. This then let me compare the impact of the
+guassian radius applied to the amount of edge that the sobel ends up. I did this in the sobel edge driver class where
+i tested the radius 4, raidus 9, and raidus 25. While increasing the radius does indeed decrease the amount of edges,
+too big of radius increases the amount to process the gaussain blur (bigger kernal) and it negativly impacts what
+the sobel edge algorithm can see (not enough edges). I looked at the canny edge detector and it did not go so well
+so I will save that for next week. I was also not able to implement the arctan piece in the sobel algorithm
+Goals for next Week:
+  - Implement the canny edge detector algorithm
+  - Implement a way to start detecting letters on my images.
