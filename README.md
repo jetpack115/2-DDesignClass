@@ -47,3 +47,10 @@ so I will save that for next week. I was also not able to implement the arctan p
 Goals for next Week:
   - Implement the canny edge detector algorithm
   - Implement a way to start detecting letters on my images.
+Week of 10/13/21
+Created a master driver class for all of my image processing programs so that i can play around much more easiy with images and different processes.
+Also, looked in to CNNs (convoluted network nodes) to start playing with that as well as deep learning to start creating some sort of algorithm that can detect plates and
+censor them. Although there are libraries that can detect letters and do that, but I want to look into deep learning and CNN's as they seem interestings
+Goals for next week
+  - Implement a very simple CNN 
+  - Look into image segmentation and start doing some work to identify how i can detect car plates
