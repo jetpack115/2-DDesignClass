@@ -54,3 +54,8 @@ censor them. Although there are libraries that can detect letters and do that, b
 Goals for next week
   - Implement a very simple CNN 
   - Look into image segmentation and start doing some work to identify how i can detect car plates
+Week 10/27/21
+Created the kernalPlay.java class and the kernalPlayDriver to launch it. It allowed me to play a little with the construction of a kernal passed over an image
+and saw what types of things could be later implemented into my CNN. The previous week i mentioned that I was following some cnn code for java, but i figured it was
+a little too advanced for me at the moment so i took up other tasks to work me up to it. More specifically https://poloclub.github.io/cnn-explainer/ creates a
+simplifed way to create my CNN and I will be tackling this for next week!
