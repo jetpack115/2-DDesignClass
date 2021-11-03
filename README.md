@@ -54,8 +54,14 @@ censor them. Although there are libraries that can detect letters and do that, b
 Goals for next week
   - Implement a very simple CNN 
   - Look into image segmentation and start doing some work to identify how i can detect car plates
-Week 10/27/21
-Created the kernalPlay.java class and the kernalPlayDriver to launch it. It allowed me to play a little with the construction of a kernal passed over an image
-and saw what types of things could be later implemented into my CNN. The previous week i mentioned that I was following some cnn code for java, but i figured it was
-a little too advanced for me at the moment so i took up other tasks to work me up to it. More specifically https://poloclub.github.io/cnn-explainer/ creates a
-simplifed way to create my CNN and I will be tackling this for next week!
+
+Week of 11/3/21
+Modified some of my algorithms to reduce the size of the image after every convulution in order to prepeare for a CNN. Created three java class
+the kernaltoMinimizePic.java class has algorithms using the mean blur, guassian blur, and pieces of the sobel edge detector algorithm that 
+make the picture smaller based on the kernal not reaching outside its bounds. I also created an algorithm that splits the channels of an
+rgb image in order to have three input images (red green or blue channels). I also played around with the time it took to fully convulute to 
+a small image a big image. It usually took a little over 2 minutes to finalaize.
+Goals for next week
+  -figure out different convultions to add to my process
+  -figure out how nueral networks exactly function so i can implement the math behiund them (i understand process but not math)
+  
