@@ -64,4 +64,4 @@ a small image a big image. It usually took a little over 2 minutes to finalaize.
 Goals for next week
   -figure out different convultions to add to my process
   -figure out how nueral networks exactly function so i can implement the math behiund them (i understand process but not math)
-  
+  - use https://www.ismailmebsout.com/Convolutional%20Neural%20Network%20-%20Part%201/
