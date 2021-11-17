@@ -65,3 +65,10 @@ Goals for next week
   -figure out different convultions to add to my process
   -figure out how nueral networks exactly function so i can implement the math behiund them (i understand process but not math)
   - use https://www.ismailmebsout.com/Convolutional%20Neural%20Network%20-%20Part%201/
+
+Week of 11/17/21
+Created three classes to start detecting characters in images. In order to detect words, I have used the Tess4j java API in order to detect character in an image. In my
+sobelEdgeDetectionAllInOne.java class, all the processes to convert an image into sobel are processed (so you just need to input your image).
+In the characterDetector.java class, I use the Tess4j api to detect characters from my image and turn them into strings. Finally, in my
+characterLocater.java class, Tess4j helps me identify the boxes that are in my image for every character detected in the image. For next week I will draw bozes ontop of the sobel image so I can start figuring out why some Tess4j decides to detect weird characters that aren't really there. I will attempt to fix this and this will
+help me move on to my next step of blurring the region where there is sensitive information!
