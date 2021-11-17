@@ -67,6 +67,7 @@ Goals for next week
   - use https://www.ismailmebsout.com/Convolutional%20Neural%20Network%20-%20Part%201/
 
 Week of 11/17/21
+
 Created three classes to start detecting characters in images. In order to detect words, I have used the Tess4j java API in order to detect character in an image. In my
 sobelEdgeDetectionAllInOne.java class, all the processes to convert an image into sobel are processed (so you just need to input your image).
 In the characterDetector.java class, I use the Tess4j api to detect characters from my image and turn them into strings. Finally, in my
