@@ -81,3 +81,4 @@ sobelEdgeDetectionAllInOne.java class, all the processes to convert an image int
 In the characterDetector.java class, I use the Tess4j api to detect characters from my image and turn them into strings. Finally, in my
 characterLocater.java class, Tess4j helps me identify the boxes that are in my image for every character detected in the image. For next week I will draw bozes ontop of the sobel image so I can start figuring out why some Tess4j decides to detect weird characters that aren't really there. I will attempt to fix this and this will
 help me move on to my next step of blurring the region where there is sensitive information!
+Tess4j link: http://tess4j.sourceforge.net/
