@@ -504,5 +504,49 @@ public class sobelEdgeDetectionAllInOne
         }
         return result;
     }
+    public void invertColor()
+    {
+        try {
+            // Open the dog image. 
+            File input = new File("C:/Users/jetpa/Desktop/2D_Design_Code/sobelComplete.jpg");
+            
+            // Get your dimensions. 
+            BufferedImage img= ImageIO.read(input);
+            int width = img.getWidth();
+            int height = img.getHeight();
+            
+            //Standard for loop to iterate through all the pixels.
+            for(int i = 0; i < height; i++) 
+            {
+                for(int j = 0; j < width; j++) 
+                {
+                
+                    // Get your pixel at coordinate.
+                    Color c = new Color(this.image.getRGB(j, i));
+                    int red = 0;
+                    int green = 0;
+                    int blue = 0;
+
+                    if (c.getRed() < 20 && c.getBlue() < 20 && c.getGreen() < 20)
+                    {
+                        red = 255;
+                        green = 255;
+                        blue = 255;
+                    }
+                    Color newColor = new Color(red, green, blue);
+                   
+                    // Actually sets the pixel to the calculated new rgb we found in the formulas above.
+                    this.image.setRGB(j ,i , newColor.getRGB());
+                }
+             }
+             File output = new File("invertedColors.jpg");
+             ImageIO.write(this.image, "jpg", output);
+             
+          } 
+          catch (Exception e) 
+          {
+            // Nothing here 
+          }
+    }
 
 }

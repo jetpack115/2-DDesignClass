@@ -18,9 +18,16 @@ public class characterLocater
     public static void main(String[] args) throws IOException
     {
         // Converts a colored image all the way to a a sobel edge detection 
-        sobelEdgeDetectionAllInOne carplates = new sobelEdgeDetectionAllInOne("C:/Users/jetpa/Desktop/2D_Design_Code/In/volvo.jpg");
+        //sobelEdgeDetectionAllInOne carplates = new sobelEdgeDetectionAllInOne("C:/Users/jetpa/Desktop/2D_Design_Code/In/plates.jpg");
+        //carplates.invertColor();
 
-        String imageUrl = "C:/Users/jetpa/Desktop/2D_Design_Code/In/volvo.jpg";
+        //Testing my invert class..
+        grayscale grey = new grayscale();
+        grey.turnGrayscale("C:/Users/jetpa/Desktop/2D_Design_Code/In/plates.jpg", "gray.jpg");
+        invertColor inv = new invertColor("C:/Users/jetpa/Desktop/2D_Design_Code/gray.jpg");
+        inv.invert("invertPicture.jpg");
+
+        String imageUrl = "C:/Users/jetpa/Desktop/2D_Design_Code/invertPicture.jpg";
         File imageFile = new File(imageUrl);
         Image image = ImageIO.read(imageFile);
         BufferedImage bi = toBufferedImage(image);
